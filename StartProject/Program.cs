@@ -21,9 +21,15 @@ namespace StartProject
 				firstLine += currentNumber + " ";
 			}
 			Console.WriteLine(firstLine);
-			for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
+			for (int currentLineNumber = 1; currentLineNumber <= 12; currentLineNumber++)
 			{
-				Console.WriteLine(currentNumber);
+				var currentLineString = currentLineNumber.ToString() + " ";
+
+				for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
+				{
+					currentLineString += currentNumber * currentLineNumber + " ";
+				}
+				Console.WriteLine(currentLineString);
 			}
 
 			Console.ReadLine();
