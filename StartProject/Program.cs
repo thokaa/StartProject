@@ -15,7 +15,7 @@ namespace StartProject
 
 		public static void Problem7()
 		{
-			var firstLine = "x ";
+			var firstLine = ConvertNumberToStringWithSpaces(0,2) + " ";
 			for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
 			{
 				firstLine += ConvertNumberToStringWithSpaces(currentNumber) + " ";
@@ -23,7 +23,7 @@ namespace StartProject
 			Console.WriteLine(firstLine);
 			for (int currentLineNumber = 1; currentLineNumber <= 12; currentLineNumber++)
 			{
-				var currentLineString = currentLineNumber.ToString() + " ";
+				var currentLineString = ConvertNumberToStringWithSpaces(currentLineNumber,2) + " ";
 
 				for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
 				{
@@ -35,10 +35,10 @@ namespace StartProject
 			Console.ReadLine();
 		}
 
-		public static string ConvertNumberToStringWithSpaces(int number)
+		public static string ConvertNumberToStringWithSpaces(int number, int numberOfSpaces = 3)
 		{
 			var currentNumberString = number.ToString();
-			while (currentNumberString.Length < 3)
+			while (currentNumberString.Length < numberOfSpaces)
 			{
 				currentNumberString = " " + currentNumberString;
 			}
