@@ -13,19 +13,20 @@ namespace StartProject
 			Problem7();
 		}
 
-		public static void Problem7()
+		public static void Problem7(int number = 12)
 		{
 			var firstLine = ConvertNumberToStringWithSpaces(0,2) + " ";
-			for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
+
+			for (int currentNumber = 1; currentNumber <= number; currentNumber++)
 			{
 				firstLine += ConvertNumberToStringWithSpaces(currentNumber) + " ";
 			}
 			Console.WriteLine(firstLine);
-			for (int currentLineNumber = 1; currentLineNumber <= 12; currentLineNumber++)
+			for (int currentLineNumber = 1; currentLineNumber <= number; currentLineNumber++)
 			{
 				var currentLineString = ConvertNumberToStringWithSpaces(currentLineNumber,2) + " ";
 
-				for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
+				for (int currentNumber = 1; currentNumber <= number; currentNumber++)
 				{
 					currentLineString += ConvertNumberToStringWithSpaces(currentNumber * currentLineNumber) + " ";
 				}
