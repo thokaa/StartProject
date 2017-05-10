@@ -15,12 +15,14 @@ namespace StartProject
 
 		public static void Problem4()
 		{
+			Console.WriteLine("Please enter a number...");
 
-			var n = 5;
+			var numberFromConsole = Console.ReadLine();
+			Int32 n = Int32.Parse(numberFromConsole);
 			var currentNumber = 1;
 			var sum = 0;
 			while (currentNumber <= n)
-			{
+			{	// se repeta pana cand conditia este satisfacuta (true)
 				sum = sum + currentNumber;
 				currentNumber = currentNumber + 1;
 			}
