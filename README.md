@@ -1,0 +1,2 @@
+# StartProject
+Start Console Project
