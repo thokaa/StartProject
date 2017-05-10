@@ -18,8 +18,8 @@ namespace StartProject
 			Console.WriteLine("Please enter a number...");
 			int n;
 			var numberFromConsole = Console.ReadLine();
-			var numberIsInteger = int.TryParse(numberFromConsole, out n);
-			if (numberIsInteger)
+
+			if (int.TryParse(numberFromConsole, out n))
 			{
 				var currentNumber = 1;
 				var sum = 0;
@@ -29,7 +29,7 @@ namespace StartProject
 					currentNumber = currentNumber + 1;
 				}
 
-				Console.WriteLine(sum);
+				Console.WriteLine("1+2+...+n=" + sum);
 			}
 			else
 			{
