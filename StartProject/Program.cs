@@ -15,12 +15,10 @@ namespace StartProject
 
 		public static void Problem7()
 		{
-			var currentNumber = 1;
 			var currentLine = "";
-			while (currentNumber <= 12)
+			for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
 			{
 				currentLine += currentNumber + " ";
-				currentNumber++;
 			}
 			Console.WriteLine(currentLine);
 			Console.ReadLine();
