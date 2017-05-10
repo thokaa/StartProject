@@ -10,7 +10,20 @@ namespace StartProject
     {
         static void Main(string[] args)
         {
-			Problem4();
+			Problem7();
+		}
+
+		public static void Problem7()
+		{
+			var currentNumber = 1;
+			var currentLine = "";
+			while (currentNumber <= 12)
+			{
+				currentLine += currentNumber + " ";
+				currentNumber++;
+			}
+			Console.WriteLine(currentLine);
+			Console.ReadLine();
 		}
 
 		public static void Problem4()
