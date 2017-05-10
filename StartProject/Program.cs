@@ -25,7 +25,11 @@ namespace StartProject
 				var sum = 0;
 				while (currentNumber <= n)
 				{   // se repeta pana cand conditia este satisfacuta (true)
-					sum = sum + currentNumber;
+					var currentNumberDividedBy3 = (decimal) currentNumber / 3;
+					var currentNumberDividedBy5 = (decimal) currentNumber / 5;
+					if (currentNumberDividedBy3 == (int)currentNumberDividedBy3
+						|| currentNumberDividedBy5 == (int)currentNumberDividedBy5)
+						sum = sum + currentNumber;
 					currentNumber = currentNumber + 1;
 				}
 
