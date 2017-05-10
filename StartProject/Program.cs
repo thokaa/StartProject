@@ -16,18 +16,25 @@ namespace StartProject
 		public static void Problem4()
 		{
 			Console.WriteLine("Please enter a number...");
-
+			int n;
 			var numberFromConsole = Console.ReadLine();
-			Int32 n = Int32.Parse(numberFromConsole);
-			var currentNumber = 1;
-			var sum = 0;
-			while (currentNumber <= n)
-			{	// se repeta pana cand conditia este satisfacuta (true)
-				sum = sum + currentNumber;
-				currentNumber = currentNumber + 1;
-			}
+			var numberIsInteger = int.TryParse(numberFromConsole, out n);
+			if (numberIsInteger)
+			{
+				var currentNumber = 1;
+				var sum = 0;
+				while (currentNumber <= n)
+				{   // se repeta pana cand conditia este satisfacuta (true)
+					sum = sum + currentNumber;
+					currentNumber = currentNumber + 1;
+				}
 
-			Console.WriteLine(sum);
+				Console.WriteLine(sum);
+			}
+			else
+			{
+				Console.WriteLine("Number is not an integer");
+			}
 			Console.ReadLine();
 		}
 
@@ -50,5 +57,5 @@ namespace StartProject
 
 			Console.ReadLine();
 		}
-    }
+	}
 }
