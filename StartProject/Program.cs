@@ -18,12 +18,7 @@ namespace StartProject
 			var firstLine = "x ";
 			for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
 			{
-				var currentNumberString = currentNumber.ToString();
-				while (currentNumberString.Length < 3)
-				{
-					currentNumberString = " " + currentNumberString;
-				}
-				firstLine += currentNumberString + " ";
+				firstLine += ConvertNumberToStringWithSpaces(currentNumber) + " ";
 			}
 			Console.WriteLine(firstLine);
 			for (int currentLineNumber = 1; currentLineNumber <= 12; currentLineNumber++)
@@ -32,7 +27,7 @@ namespace StartProject
 
 				for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
 				{
-					currentLineString += currentNumber * currentLineNumber + " ";
+					currentLineString += ConvertNumberToStringWithSpaces(currentNumber * currentLineNumber) + " ";
 				}
 				Console.WriteLine(currentLineString);
 			}
@@ -40,6 +35,15 @@ namespace StartProject
 			Console.ReadLine();
 		}
 
+		public static string ConvertNumberToStringWithSpaces(int number)
+		{
+			var currentNumberString = number.ToString();
+			while (currentNumberString.Length < 3)
+			{
+				currentNumberString = " " + currentNumberString;
+			}
+			return currentNumberString;
+		}
 
 
 		public static void Problem4()
