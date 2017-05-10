@@ -18,7 +18,12 @@ namespace StartProject
 			var firstLine = "x ";
 			for (int currentNumber = 1; currentNumber <= 12; currentNumber++)
 			{
-				firstLine += currentNumber + " ";
+				var currentNumberString = currentNumber.ToString();
+				while (currentNumberString.Length < 3)
+				{
+					currentNumberString = " " + currentNumberString;
+				}
+				firstLine += currentNumberString + " ";
 			}
 			Console.WriteLine(firstLine);
 			for (int currentLineNumber = 1; currentLineNumber <= 12; currentLineNumber++)
@@ -34,6 +39,8 @@ namespace StartProject
 
 			Console.ReadLine();
 		}
+
+
 
 		public static void Problem4()
 		{
