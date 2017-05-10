@@ -13,6 +13,11 @@ namespace StartProject
 			Problem7();
 		}
 
+        public static void Problem6()
+        {
+
+        }
+
 		public static void Problem7(int number = 12)
 		{
 			var firstLine = ConvertNumberToStringWithSpaces(0,2) + " ";
